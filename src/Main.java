@@ -1,10 +1,9 @@
+import mypackage.Product;
+
 public class Main {
     public static void main(String[] args) {
-
-        AbstractDiceShaker shaker = new ConcreteSingleDiceShaker();
-
-        for (int i = 0; i < 10; i++) {
-            System.out.println(shaker.next());
-        }
+        Product product = new Product(100.0);
+        product.setDiscount(20.0);
+        System.out.printf("Selling Price %f%n", product.getSellingPrice());
     }
 }
